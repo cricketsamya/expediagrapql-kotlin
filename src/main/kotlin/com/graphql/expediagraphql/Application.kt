@@ -1,11 +1,12 @@
 package com.graphql.expediagraphql
 
+import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class ExpediagraphqlKotlinApplication
+class Application
 
 fun main(args: Array<String>) {
-	runApplication<ExpediagraphqlKotlinApplication>(*args)
+	runApplication<Application>(*args)
 }
