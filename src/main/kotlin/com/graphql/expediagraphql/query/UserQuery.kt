@@ -9,13 +9,10 @@ import org.springframework.stereotype.Component
 @Component
 class UserQuery(private val repository: UserRepository) : Query {
 
-    @GraphQLDescription("retrieves User from the repository by ID")
+    @GraphQLDescription("retrieves User from the repository by id")
     fun findUserById(
-        @GraphQLDescription("The special ingredient") id: String
-    ): Users {
-        var user = repository.findById(id)
-        return user.get()
-    }
+        @GraphQLDescription("id of the user") id: String
+    ): Users = repository.findById(id).get()
 
     @GraphQLDescription("retrieves all Users from repository")
     fun getAllUsers(): List<Users> = repository.getAllUsers()

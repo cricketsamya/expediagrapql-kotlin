@@ -16,11 +16,6 @@ class UserMutation(private val repository: UserRepository) : Mutation {
     fun updateUser(user: Users): Users? = repository.save(user)
 
     @GraphQLDescription("Delete user from repository")
-    fun deleteUser(id: String): Users? {
-        var user = repository.findById(id)
-        if (user.isPresent) {
-            repository.deleteById(id)
-        }
-        return user.get();
-    }
+    fun deleteUser(id: String): Users? = repository.deleteUser(id)
+
 }

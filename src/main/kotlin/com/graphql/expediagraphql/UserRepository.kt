@@ -11,4 +11,11 @@ interface UserRepository : CrudRepository<Users, String> {
     @Query("select * from users")
     fun getAllUsers(): List<Users>
 
+    fun deleteUser(id: String): Users? {
+        var user = findById(id)
+        if (user.isPresent) {
+            deleteById(id)
+        }
+        return user.get()
+    }
 }
