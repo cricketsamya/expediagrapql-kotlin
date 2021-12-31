@@ -1,1 +1,1 @@
-rootProject.name = "expediagraphql-kotlin"
+rootProject.name = "egraphql-kotlin"

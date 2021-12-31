@@ -1,4 +1,4 @@
-package com.graphql.expediagraphql.model
+package com.graphql.model
 
 
 import org.springframework.data.annotation.Id

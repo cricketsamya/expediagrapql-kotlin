@@ -1,4 +1,4 @@
-# expediagrapql-kotlin
+# graphql-kotlin
 
 # Some sample queries:
 
