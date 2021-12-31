@@ -19,20 +19,20 @@ repositories {
 }
 
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter-data-jdbc")
-    implementation("org.springframework.boot:spring-boot-starter-webflux")
-    implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
-    implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
-    implementation("org.jetbrains.kotlin:kotlin-reflect")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
+    implementation("org.springframework.boot:spring-boot-starter-data-jdbc:2.6.2")
+    implementation("org.springframework.boot:spring-boot-starter-webflux:2.6.2")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.1")
+    implementation("io.projectreactor.kotlin:reactor-kotlin-extensions:1.1.5")
+    implementation("org.jetbrains.kotlin:kotlin-reflect:1.6.0")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor:1.6.0")
     implementation("com.expediagroup:graphql-kotlin-spring-server:5.3.1")
     implementation("com.expediagroup:graphql-kotlin-hooks-provider:5.3.1")
-    implementation("org.postgresql:postgresql:42.2.11")
+    implementation("org.postgresql:postgresql:42.3.1")
 
-    runtimeOnly("com.h2database:h2")
-    testImplementation("org.springframework.boot:spring-boot-starter-test")
-    testImplementation("io.projectreactor:reactor-test")
+    runtimeOnly("com.h2database:h2:1.4.196")
+    testImplementation("org.springframework.boot:spring-boot-starter-test:2.6.2")
+    testImplementation("io.projectreactor:reactor-test:3.4.13")
 }
 
 tasks.withType<KotlinCompile> {
