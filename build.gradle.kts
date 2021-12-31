@@ -30,7 +30,7 @@ dependencies {
     implementation("com.expediagroup:graphql-kotlin-hooks-provider:5.3.1")
     implementation("org.postgresql:postgresql:42.3.1")
 
-    runtimeOnly("com.h2database:h2:1.4.196")
+    runtimeOnly("com.h2database:h2:2.0.204")
     testImplementation("org.springframework.boot:spring-boot-starter-test:2.6.2")
     testImplementation("io.projectreactor:reactor-test:3.4.13")
 }
