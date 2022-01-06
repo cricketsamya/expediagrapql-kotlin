@@ -1,6 +1,7 @@
-package com.graphql
+package com.graphql.service
 
 import com.graphql.model.Users
+import com.graphql.repository.UserRepository
 import org.springframework.stereotype.Service
 import java.util.*
 

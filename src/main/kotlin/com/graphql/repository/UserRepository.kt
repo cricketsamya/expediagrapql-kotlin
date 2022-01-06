@@ -1,4 +1,4 @@
-package com.graphql
+package com.graphql.repository
 
 import com.graphql.model.Users
 import org.springframework.data.jdbc.repository.query.Query

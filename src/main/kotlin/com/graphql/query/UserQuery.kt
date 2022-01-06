@@ -2,7 +2,7 @@ package com.graphql.query
 
 import com.expediagroup.graphql.generator.annotations.GraphQLDescription
 import com.expediagroup.graphql.server.operations.Query
-import com.graphql.UserService
+import com.graphql.service.UserService
 import com.graphql.model.Users
 import org.springframework.stereotype.Component
 
