@@ -17,8 +17,8 @@ import org.springframework.web.cors.CorsConfiguration
 import org.springframework.web.cors.CorsConfigurationSource
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource
 
-@Configuration
-@EnableGlobalMethodSecurity(prePostEnabled = true)
+//@Configuration
+//@EnableGlobalMethodSecurity(prePostEnabled = true)
 class WebConfig(
     val bCryptPasswordEncoder: BCryptPasswordEncoder,
     val userDetailsService: UserService,
@@ -31,10 +31,10 @@ class WebConfig(
             .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS) // no sessions
             .and()
             .authorizeRequests()
-            .antMatchers("/api/**").permitAll()
+          //  .antMatchers("/api/**").permitAll()
             .antMatchers("/error/**").permitAll()
             .antMatchers(HttpMethod.POST, "/login").permitAll()
-            .anyRequest().permitAll()
+            //.anyRequest().permitAll()
             .and()
             .addFilter(JWTAuthenticationFilter(authenticationManager(), securityProperties))
             .addFilter(JWTAuthorizationFilter(authenticationManager(), securityProperties))
