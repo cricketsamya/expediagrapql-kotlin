@@ -32,7 +32,7 @@ dependencies {
 
     runtimeOnly("com.h2database:h2:1.4.196")
     testImplementation("org.springframework.boot:spring-boot-starter-test:2.6.2")
-    testImplementation("io.projectreactor:reactor-test:3.4.13")
+    testImplementation("io.projectreactor:reactor-test:3.4.14")
 }
 
 tasks.withType<KotlinCompile> {
