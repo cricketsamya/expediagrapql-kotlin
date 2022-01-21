@@ -27,7 +27,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor:1.6.0")
     implementation("com.expediagroup:graphql-kotlin-spring-server:5.3.2")
-    implementation("com.expediagroup:graphql-kotlin-hooks-provider:5.3.1")
+    implementation("com.expediagroup:graphql-kotlin-hooks-provider:5.3.2")
     implementation("org.postgresql:postgresql:42.3.1")
 
     runtimeOnly("com.h2database:h2:1.4.196")
