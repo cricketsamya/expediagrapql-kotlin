@@ -46,6 +46,12 @@ tasks.withType<Test> {
     useJUnitPlatform()
 }
 
+tasks.withType<Jar> {
+    manifest {
+        attributes["Main-Class"] = "com.graphql.Application"
+    }
+}
+
 graphql {
     schema {
         packages = listOf("com.graphql.expediagraphql")
