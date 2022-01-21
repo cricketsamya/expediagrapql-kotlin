@@ -37,3 +37,22 @@ mutation updateUser {
   }
 }
 ```
+
+
+## Build Docker image and run in container
+
+### Build
+```
+docker build . -t egraphql
+```
+
+### Run
+```
+docker run -p 3080:8080 egraphql
+```
+
+
+## Test
+```
+localhost:3080/playground
+```
