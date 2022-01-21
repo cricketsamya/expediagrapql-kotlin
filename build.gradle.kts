@@ -45,13 +45,12 @@ tasks.withType<KotlinCompile> {
 tasks.withType<Test> {
     useJUnitPlatform()
 }
-
-tasks.withType<Jar> {
-    manifest {
-        attributes["Main-Class"] = "com.graphql.Application"
-    }
+springBoot {
+    mainClass.set("com.graphql.ApplicationKt")
 }
-
+tasks.getByName<Jar>("jar") {
+    enabled = false
+}
 graphql {
     schema {
         packages = listOf("com.graphql.expediagraphql")
