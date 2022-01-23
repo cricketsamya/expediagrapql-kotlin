@@ -45,6 +45,7 @@ the build and after successful build the app is deployed to Heroku free dynamos.
 
 ## Future improvements
 
+- H2 is used for build and test, should be switch to PostgreSQL and H2 for tests
 - More tests
 - [Branch](https://github.com/cricketsamya/egraphql-kotlin/pull/14) is already prepared with JWT authentication
 - Docker deployment on Heroku

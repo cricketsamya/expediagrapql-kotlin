@@ -39,7 +39,7 @@ dependencies {
     implementation("io.jsonwebtoken:jjwt-jackson:0.11.2")
     
 
-    runtimeOnly("com.h2database:h2:2.1.210")
+    runtimeOnly("com.h2database:h2:1.4.195")
     testImplementation("org.springframework.boot:spring-boot-starter-test:2.6.3")
     testImplementation("io.projectreactor:reactor-test:3.4.14")
     
