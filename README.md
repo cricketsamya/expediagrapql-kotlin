@@ -1,4 +1,4 @@
-# graphql-kotlin
+# egraphql-kotlin
 
 The project uses [Expedia Group's GraphQL](https://opensource.expediagroup.com/graphql-kotlin/docs/)
  wrapper along with Kotlin to demonstrate how the library works.
@@ -41,7 +41,7 @@ The Heroku deployement is auto deployable, whenever there is a commit on main br
 ## Future improvements
 
 - More tests
-- Branch is already prepared with JWT authentication
+- [Branch](https://github.com/cricketsamya/egraphql-kotlin/pull/14) is already prepared with JWT authentication
 - Docker deployment on Heroku
 
 # Some sample queries:
