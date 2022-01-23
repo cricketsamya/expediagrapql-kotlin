@@ -34,4 +34,5 @@ class UserService(private val repository: UserRepository) : UserDetailsService {
             user.get(0).username, user.get(0).password, authorities
         )
     }
+    fun findByName(name: String): List<Users> = repository.findByName(name)
 }

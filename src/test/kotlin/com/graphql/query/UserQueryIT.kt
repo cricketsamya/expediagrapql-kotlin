@@ -1,18 +1,3 @@
-/*
- * Copyright 2021 Expedia, Inc
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     https://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package com.graphql.query
 
 import com.expediagroup.graphql.server.types.GraphQLRequest
@@ -37,5 +22,13 @@ class UserQueryIT(@Autowired private val testClient: WebTestClient) {
             .bodyValue(request).exchange().expectBody().jsonPath("$.data.getAllUsers").exists()
             .jsonPath("$.data.getAllUsers[0].name").isEqualTo("Sameer").jsonPath("$.data.getAllUsers[1].name")
             .isEqualTo("Max")
+    }
+
+    @Test
+    fun `get User by Name`() {
+        val request = GraphQLRequest(query = "query { findUserByName(name:\"Sameer\"){name}\n }")
+        testClient.post().uri("/graphql").accept(MediaType.APPLICATION_JSON).contentType(MediaType.APPLICATION_JSON)
+            .bodyValue(request).exchange().expectBody().jsonPath("$.data.findUserByName").exists()
+            .jsonPath("$.data.findUserByName[0].name").isEqualTo("Sameer")
     }
 }

@@ -20,6 +20,7 @@ repositories {
 
 dependencies {
 
+    implementation("org.springframework.boot:spring-boot-starter-web:2.6.3")
     implementation("org.springframework.boot:spring-boot-starter-security:2.6.3")
     implementation("org.springframework.boot:spring-boot-starter-data-jdbc:2.6.3")
     implementation("org.springframework.boot:spring-boot-starter-webflux:2.6.3")
@@ -37,10 +38,10 @@ dependencies {
     implementation("io.jsonwebtoken:jjwt-impl:0.11.2")
     implementation("io.jsonwebtoken:jjwt-jackson:0.11.2")
     
-    runtimeOnly("com.h2database:h2:1.4.196")
 
+    runtimeOnly("com.h2database:h2:2.1.210")
     testImplementation("org.springframework.boot:spring-boot-starter-test:2.6.3")
-    testImplementation("io.projectreactor:reactor-test:3.4.13")
+    testImplementation("io.projectreactor:reactor-test:3.4.14")
     
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
 

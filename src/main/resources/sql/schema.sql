@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS users
 (
-    id       VARCHAR(60) DEFAULT RANDOM_UUID() PRIMARY KEY,
+    id       bigint auto_increment PRIMARY KEY,
     name     VARCHAR NOT NULL,
     username VARCHAR NOT NULL,
     password VARCHAR NOT NULL
