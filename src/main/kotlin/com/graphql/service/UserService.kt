@@ -19,4 +19,5 @@ class UserService(private val repository: UserRepository) {
     fun save(user: Users): Users? = repository.save(user)
     fun findById(id: String): Optional<Users> = repository.findById(id)
     fun getAllUsers(): List<Users> = repository.getAllUsers()
+    fun findByName(name: String): List<Users> = repository.findByName(name)
 }

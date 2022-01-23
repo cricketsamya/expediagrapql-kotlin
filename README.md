@@ -62,6 +62,12 @@ query {
 findUserById(id:"f80cdce0-7b3e-4674-9673-ab9f30b148f9"){name}
 }
 ```
+- Find a user by Name
+```
+query {
+findUserByName(name:"Sameer"){name}
+}
+```
 
 - Add user to the DB
 

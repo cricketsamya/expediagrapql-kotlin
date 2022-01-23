@@ -38,4 +38,12 @@ class UserQueryIT(@Autowired private val testClient: WebTestClient) {
             .jsonPath("$.data.getAllUsers[0].name").isEqualTo("Sameer").jsonPath("$.data.getAllUsers[1].name")
             .isEqualTo("Max")
     }
+
+    @Test
+    fun `get User by Name`() {
+        val request = GraphQLRequest(query = "query { findUserByName(name:\"Sameer\"){name}\n }")
+        testClient.post().uri("/graphql").accept(MediaType.APPLICATION_JSON).contentType(MediaType.APPLICATION_JSON)
+            .bodyValue(request).exchange().expectBody().jsonPath("$.data.findUserByName").exists()
+            .jsonPath("$.data.findUserByName[0].name").isEqualTo("Sameer")
+    }
 }
