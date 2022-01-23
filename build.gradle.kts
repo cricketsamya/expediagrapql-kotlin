@@ -1,9 +1,9 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    id("org.springframework.boot") version "2.6.2"
+    id("org.springframework.boot") version "2.6.3"
     id("io.spring.dependency-management") version "1.0.11.RELEASE"
-    id("com.expediagroup.graphql") version "5.3.1"
+    id("com.expediagroup.graphql") version "5.3.2"
     kotlin("jvm") version "1.6.10"
     kotlin("plugin.spring") version "1.6.10"
 }
@@ -19,27 +19,29 @@ repositories {
 }
 
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter-web:2.6.2")
-    implementation("org.springframework.boot:spring-boot-starter-data-jdbc:2.6.2")
-    implementation("org.springframework.boot:spring-boot-starter-webflux:2.6.2")
-    implementation("org.springframework.boot:spring-boot-starter-security:2.6.2")
+
+    implementation("org.springframework.boot:spring-boot-starter-security:2.6.3")
+    implementation("org.springframework.boot:spring-boot-starter-data-jdbc:2.6.3")
+    implementation("org.springframework.boot:spring-boot-starter-webflux:2.6.3")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.1")
     implementation("io.projectreactor.kotlin:reactor-kotlin-extensions:1.1.5")
-    implementation("org.jetbrains.kotlin:kotlin-reflect:1.6.0")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.0")
+    implementation("org.jetbrains.kotlin:kotlin-reflect:1.6.10")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor:1.6.0")
-    implementation("com.expediagroup:graphql-kotlin-spring-server:5.3.1")
-    implementation("com.expediagroup:graphql-kotlin-hooks-provider:5.3.1")
+    implementation("com.expediagroup:graphql-kotlin-spring-server:5.3.2")
+    implementation("com.expediagroup:graphql-kotlin-hooks-provider:5.3.2")
     implementation("org.postgresql:postgresql:42.3.1")
     implementation("org.springframework.boot:spring-boot-configuration-processor")
-    runtimeOnly("com.h2database:h2:1.4.196")
-    testImplementation("org.springframework.boot:spring-boot-starter-test:2.6.2")
-    testImplementation("io.projectreactor:reactor-test:3.4.13")
-
+    
     implementation("io.jsonwebtoken:jjwt-api:0.11.2")
     implementation("io.jsonwebtoken:jjwt-impl:0.11.2")
     implementation("io.jsonwebtoken:jjwt-jackson:0.11.2")
+    
+    runtimeOnly("com.h2database:h2:1.4.196")
 
+    testImplementation("org.springframework.boot:spring-boot-starter-test:2.6.3")
+    testImplementation("io.projectreactor:reactor-test:3.4.13")
+    
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
 
 }
@@ -54,7 +56,12 @@ tasks.withType<KotlinCompile> {
 tasks.withType<Test> {
     useJUnitPlatform()
 }
-
+springBoot {
+    mainClass.set("com.graphql.ApplicationKt")
+}
+tasks.getByName<Jar>("jar") {
+    enabled = false
+}
 graphql {
     schema {
         packages = listOf("com.graphql.expediagraphql")
