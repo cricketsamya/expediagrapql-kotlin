@@ -46,17 +46,24 @@ The Heroku deployement is auto deployable, whenever there is a commit on main br
 
 # Some sample queries:
 
-```
-query {
-findUserById(id:"f80cdce0-7b3e-4674-9673-ab9f30b148f9"){name}
-}
-```
+There is a sample data in the project added to HSQLDB, using plain SQLS. Below are some sample queries that helps to understand how GraphQL library works.
+
+- Get all users from DB with all the attributes
 
 ```
 query {
 getAllUsers{id,name}
 }
 ```
+
+- Find a user by Id, below is the sample id
+```
+query {
+findUserById(id:"f80cdce0-7b3e-4674-9673-ab9f30b148f9"){name}
+}
+```
+
+- Add user to the DB
 
 ```
 mutation addUser {
@@ -66,6 +73,8 @@ id
 }
 ```
 
+- Delete the user from DB, below is the sample id
+
 ```
 mutation deleteUser {
   deleteUser(id:"f9e49473-4d2d-4ec1-919f-10671c0299ae") {
@@ -74,6 +83,7 @@ mutation deleteUser {
 }
 ```
 
+- Update a user in the DB, below is the sample id
 ```
 mutation updateUser {
   updateUser(user: { id:"4d830a13-25b6-4b5c-9fbf-5677acf55ad2",name: "samdeer1", password: "asss", username: "aaa" }) {
@@ -81,6 +91,8 @@ mutation updateUser {
   }
 }
 ```
+
+### *Sample ids must be replated with the actual ids.
 
 
 
