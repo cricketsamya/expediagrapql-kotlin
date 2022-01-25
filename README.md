@@ -13,7 +13,7 @@ Technologies used:
 
 The project supports Docker using Dockerfile where a container is built with the Spring Boot jar, and the container can
 be started locally. Also this project right now also deployed
-to [Heroku](https://egraphql-test.herokuapp.com/playground) for futher testing.
+to Heroku for futher testing.
 
 The repo also supports GitHub action that builds the project, and checks if the code commited to main branch is working
 or not.
