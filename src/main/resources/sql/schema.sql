@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS users
 );
 
 INSERT INTO users(name, username, password)
-VALUES ('Sameer', 'sammy', 'password1');
+VALUES ('Sameer', 'sammy', '$2a$10$5AWyzymSnNypg9BkMOyKE.zA05GtRKHCoWimh.q2w.KAO5koBYPM6');
 
 INSERT INTO users(name, username, password)
 VALUES ('Max', 'Mustermann', 'password2');

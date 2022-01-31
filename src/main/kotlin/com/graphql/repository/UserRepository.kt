@@ -11,5 +11,7 @@ interface UserRepository : CrudRepository<Users, String> {
     @Query("select * from users")
     fun getAllUsers(): List<Users>
 
+    fun findByUsername(username: String): List<Users>
+
     fun findByName(name: String): List<Users>
 }
