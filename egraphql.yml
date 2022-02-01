@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: egraphql-deployment
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      bb: egraphql
+  template:
+    metadata:
+      labels:
+        bb: egraphql
+    spec:
+      containers:
+        - name: egraphql
+          image: egraphql
+          imagePullPolicy: Never
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: egraphql-entrypoint
+  namespace: default
+spec:
+  type: LoadBalancer
+  selector:
+    bb: egraphql
+  ports:
+    - port: 5050
+      targetPort: 8080
+
+

@@ -109,6 +109,37 @@ mutation updateUser {
 }
 ```
 
+## Kubernetes deployment
+This part is optional but could be helpful to understand how K8S works. Here assumption is Docker image is already built.
+
+- To setup Kubernetes install minikube, kubectl.
+  * 		[Install kubectl] (https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+  * 		[Install minikube] (https://minikube.sigs.k8s.io/docs/start/)
+
+- After setting up, execute below commands
+### Create a deployment and service
+```
+kubectl apply -f egraphql.yml
+```
+### To check if the pod started
+```
+kubectl get pods
+```
+### To check if the service is started
+```
+kubectl get services
+```
+
+### To open a tunnel
+```
+minikube tunnel
+```
+
+### To test the Kubernetes deployment via browser
+```
+http://localhost:5050/playground
+```
+
 
 
 
