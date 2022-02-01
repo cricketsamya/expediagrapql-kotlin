@@ -10,6 +10,7 @@ Technologies used:
 - Exepdia GraphQL Library
 - Java 11
 - Docker
+- Kubernetes (Optional)
 
 The project supports Docker using Dockerfile where a container is built with the Spring Boot jar, and the container can
 be started locally. Also this project right now also deployed
