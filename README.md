@@ -19,6 +19,8 @@ to Heroku for futher testing.
 The repo also supports GitHub action that builds the project, and checks if the code commited to main branch is working
 or not.
 
+Optionally, the docker container can be deployed to local k8s cluster, using `kubectl`. Information can be found out at the end of the readme.
+
 ## Build Docker image locally and run the app in container
 
 ### Build
