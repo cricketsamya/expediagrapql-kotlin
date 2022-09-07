@@ -31,7 +31,7 @@ dependencies {
     implementation("org.postgresql:postgresql:42.5.0")
 
     runtimeOnly("com.h2database:h2:1.4.195")
-    testImplementation("org.springframework.boot:spring-boot-starter-test:2.6.3")
+    testImplementation("org.springframework.boot:spring-boot-starter-test:2.7.3")
     testImplementation("io.projectreactor:reactor-test:3.4.22")
 }
 
