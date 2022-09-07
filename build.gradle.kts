@@ -23,7 +23,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-webflux:2.6.3")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.4")
     implementation("io.projectreactor.kotlin:reactor-kotlin-extensions:1.1.5")
-    implementation("org.jetbrains.kotlin:kotlin-reflect:1.6.10")
+    implementation("org.jetbrains.kotlin:kotlin-reflect:1.7.10")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor:1.6.0")
     implementation("com.expediagroup:graphql-kotlin-spring-server:6.2.2")
